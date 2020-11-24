@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenido al Juego, adivine el número.</title>
+</head>
+<body>
+    <h1>Bienvenido al Juego, adivine el número.</h1>
+    <form action="/arriesgar" method="POST">
+        <input type="text" name='numero'>
+        <input type="submit" value="Arriesgar">
+        <input type="hidden" name="secreto" id="secreto">
+    </form>
+
+    <h1> <%= session[:feedback] %> </h1>
+</body>
+</html>
