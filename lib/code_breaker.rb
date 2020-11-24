@@ -7,7 +7,11 @@ class CodeBreaker
     end
 
     def arriesgar numero
-        return numero == secreto
+        if(numero.to_i.to_s==numero)
+            return numero == secreto
+        else
+            "Ingrese un numero"
+        end
     end
     
 end

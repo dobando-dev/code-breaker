@@ -17,4 +17,10 @@ describe CodeBreaker do
         resultado = code_breaker.arriesgar("8")
         expect(resultado).to eq false
     end
+
+    it "Arriesgo con letras y recibo un error" do
+        code_breaker = CodeBreaker.new("5")
+        resultado = code_breaker.arriesgar("a")
+        expect(resultado).to eq "Ingrese un numero"
+    end
 end
