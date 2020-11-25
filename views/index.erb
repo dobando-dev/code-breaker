@@ -10,7 +10,9 @@
     <form action="/arriesgar" method="POST">
         <input type="text" name='numero'>
         <input type="submit" value="Arriesgar">
-        <input type="hidden" name="secreto" id="secreto">
+        <input type="hidden" name="secreto" id="secreto" value="<%=session[:secreto]%>">
+        <input type="hidden" name="chances" id="chances">
+        <a href="/">Reiniciar</a>
     </form>
 
     <h1> <%= session[:feedback] %> </h1>

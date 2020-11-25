@@ -8,8 +8,23 @@ Feature: Arriesgar un numero
     And arriesgo con "5"
     Then debo ver el mensaje "Chee! Ganaste!"
 
-    Scenario: perder el juego
+    Scenario: arriesgo y pierdo la primer oportunidad
     Given inicio la aplicacion
     When el secreto es "5"
+    And quedan "3" chances
+    And arriesgo con "6"
+    Then debo ver el mensaje "No! Te quedan 2 chances!"
+
+    Scenario: arriesgo y pierdo la segunda oportunidad
+    Given inicio la aplicacion
+    When el secreto es "5"
+    And quedan "2" chances
+    And arriesgo con "6"
+    Then debo ver el mensaje "No! Te quedan 1 chances!"
+
+    Scenario: Arriesgo y no tengo mas oportunidades
+    Given inicio la aplicacion
+    When el secreto es "5"
+    And quedan "1" chances
     And arriesgo con "6"
     Then debo ver el mensaje "Boludo! fuiste!"

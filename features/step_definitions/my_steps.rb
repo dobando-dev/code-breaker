@@ -8,9 +8,13 @@ end
 
 When("el secreto es {string}") do |secreto|
     find_field('secreto', type: :hidden).set(secreto)
-  end
+end
  
 When("arriesgo con {string}") do |numero|
     fill_in("numero", :with => numero)
     click_button "Arriesgar"
+end
+
+When("quedan {string} chances") do |chances|
+    find_field('chances', type: :hidden).set(chances)
 end
